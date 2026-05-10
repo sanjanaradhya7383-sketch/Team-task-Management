@@ -13,7 +13,7 @@ function Register() {
     try {
 
       const response = await axios.post(
-        "https://team-task-management-production-875e.up.railway.app/api/auth/signup",
+        "https://team-task-management-production-6513.up.railway.app/api/auth/signup",
         {
           name,
           email,
