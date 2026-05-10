@@ -8,12 +8,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://team-task-management-899fuhzwt-team-task-management.vercel.app",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
