@@ -32,7 +32,7 @@ const [dueDate, setDueDate] = useState("");
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/tasks",
+        "https://team-task-management-production-875e.up.railway.app/api/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ const fetchProjects = async () => {
     const token = localStorage.getItem("token");
 
     const response = await axios.get(
-      "http://localhost:5000/api/projects",
+      "https://team-task-management-production-875e.up.railway.app/api/projects",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ const fetchMembers = async () => {
   try {
 
     const response = await axios.get(
-      "http://localhost:5000/api/auth/members"
+      "https://team-task-management-production-875e.up.railway.app/api/auth/members"
     );
 
     setMembers(response.data);
@@ -100,7 +100,7 @@ const createTask = async (e) => {
     const token = localStorage.getItem("token");
 
     await axios.post(
-      "http://localhost:5000/api/tasks",
+      "https://team-task-management-production-875e.up.railway.app/api/tasks",
       {
         title,
         description,
@@ -139,7 +139,7 @@ const deleteTask = async (id) => {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://team-task-management-production-875e.up.railway.app/api/tasks/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -165,7 +165,7 @@ const updateStatus = async (id, status) => {
     const token = localStorage.getItem("token");
 
     await axios.put(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://team-task-management-production-875e.up.railway.app/api/tasks/${id}`,
       { status },
       {
         headers: {
